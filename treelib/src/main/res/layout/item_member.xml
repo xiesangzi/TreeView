@@ -25,9 +25,8 @@
         android:layout_toRightOf="@id/iv_member"
         android:gravity="center_vertical"
         android:padding="5dp"
-        android:textColor="#1D1D1D"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textColor="@color/h1"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/tv_phone"
@@ -40,7 +39,7 @@
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:paddingBottom="5dp"
-        android:textColor="#4E4E4E"
+        android:textColor="@color/h2"
         android:textSize="14sp" />
 
     <ImageView

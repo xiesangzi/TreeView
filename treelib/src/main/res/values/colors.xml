@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#ffffff</color>
+    <!--一级信息、标题、主要文字-->
+    <color name="h1">#333333</color>
+    <!--次要信息、辅助文字-->
+    <color name="h2">#3B3B3C</color>
+    <!--普通级别文字、正文文字-->
+    <color name="h3">#6D6B6B</color>
 </resources>
