@@ -84,26 +84,23 @@ public class CrumbLinearLayout extends ViewGroup {
 
     public void addItem(CrumbModel crumb) {
         crumbs.add(crumb);
-        if (!crumbs.isEmpty()) {
-            View childLayout = LayoutInflater.from(mContext).inflate(R.layout.crumb_item, null, false);
-            childLayout.setTag(crumbs.size() - 1);
-            childLayout.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    int position = (int) view.getTag();
-                    if (onClickItemListener != null) {
-                        onClickItemListener.onClickItem(childLayout, crumbs.get(position));
-                    }
-                    removeItem(position);
+        View childLayout = LayoutInflater.from(mContext).inflate(R.layout.crumb_item, null, false);
+        childLayout.setTag(crumbs.size() - 1);
+        childLayout.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int position = (int) view.getTag();
+                if (onClickItemListener != null) {
+                    onClickItemListener.onClickItem(childLayout, crumbs.get(position));
                 }
-            });
-            TextView textView = childLayout.findViewById(R.id.tv_title);
-            textView.setText(crumbs.get(crumbs.size() - 1).getTitle());
-            textView.setTextSize(18);
-            LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
-            this.addView(childLayout, layoutParams);
-            computeScroll();
-        }
+                removeItem(position);
+            }
+        });
+        TextView textView = childLayout.findViewById(R.id.tv_title);
+        textView.setText(crumbs.get(crumbs.size() - 1).getTitle());
+        LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
+        this.addView(childLayout, layoutParams);
+        computeScroll();
     }
 
     private void removeItem(int position) {
