@@ -35,7 +35,7 @@ public class MemberBinder extends TreeViewBinder<MemberBinder.ViewHolder> {
             holder.tvPhone.setText(member.getPhone());
         }
         if (!TextUtils.isEmpty(member.getUserIcon())) {
-            Picasso.get().load(member.getUserIcon()).placeholder(R.mipmap.default_head).into(holder.ivMember);
+            Picasso.get().load(member.getUserIcon()).placeholder(R.drawable.default_head).into(holder.ivMember);
         }
         holder.ivPhone.setTag("phone");
         holder.ivPhone.setOnClickListener(view -> {

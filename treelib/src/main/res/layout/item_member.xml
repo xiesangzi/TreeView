@@ -13,7 +13,7 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:src="@mipmap/default_head"
+        android:src="@drawable/default_head"
         app:civ_border_color="#77FFFFFF"
         app:civ_border_width="1dp" />
 
@@ -49,5 +49,5 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:padding="8dp"
-        android:src="@mipmap/icon_phone" />
+        android:src="@drawable/icon_phone" />
 </RelativeLayout>

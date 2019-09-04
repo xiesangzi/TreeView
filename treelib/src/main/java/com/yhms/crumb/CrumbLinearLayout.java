@@ -3,6 +3,7 @@ package com.yhms.crumb;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
@@ -98,9 +99,17 @@ public class CrumbLinearLayout extends ViewGroup {
         });
         TextView textView = childLayout.findViewById(R.id.tv_title);
         textView.setText(crumbs.get(crumbs.size() - 1).getTitle());
+        int px = dpToPx(8f);
+        textView.setPadding(0, px, 0, px);
+        textView.setGravity(Gravity.CENTER_VERTICAL);
         LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
         this.addView(childLayout, layoutParams);
         computeScroll();
+    }
+
+    private int dpToPx(float dpValue) {
+        float scale = mContext.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
     }
 
     private void removeItem(int position) {

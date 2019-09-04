@@ -70,7 +70,7 @@ public class TreeLinearLayout extends LinearLayout {
                 treeAdapter.refresh(nodes);
             }
         });
-        LayoutParams layoutParams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dpToPx(40));
+        LayoutParams layoutParams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         this.addView(crumbLinearLayout, layoutParams);
     }
 

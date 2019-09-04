@@ -12,7 +12,7 @@
         android:layout_height="40dp"
         android:layout_gravity="center_vertical"
         android:padding="8dp"
-        android:src="@mipmap/icon_group" />
+        android:src="@drawable/icon_group" />
 
     <TextView
         android:id="@+id/tv_name"
@@ -42,5 +42,5 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_gravity="center_vertical"
-        android:src="@mipmap/icon_arrow" />
+        android:src="@drawable/icon_arrow" />
 </LinearLayout>
